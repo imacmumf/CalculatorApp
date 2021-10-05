@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Animation Test" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio" />
+    <meta name="author" content="Ian M" />
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0" />
+    <title>Calc-You-Later</title>
+
+    <!-- Style Sheets -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./CSS/styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300&family=Italianno&family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font awesome-->
+    <script
+      src="https://kit.fontawesome.com/87369da2a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="loader"></div>
+
+      <div>
+        <h1>Calculator App</h1>
+      </div>
+
+      <div class="calcForm container-fluid">
+        <div class="text-box">
+          <textarea class="display-area">- - -</textarea>
+        </div>
+        <div class="row row-buttons">
+          <div class="col col-buttons">
+            <button value="1" class="numbers">1</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="2" class="numbers">2</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="3" class="numbers">3</button>
+          </div>
+        </div>
+        <div class="row row-buttons">
+          <div class="col col-buttons">
+            <button value="4" class="numbers">4</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="5" class="numbers">5</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="6" class="numbers">6</button>
+          </div>
+        </div>
+        <div class="row row-buttons">
+          <div class="col col-buttons">
+            <button value="7" class="numbers">7</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="8" class="numbers">8</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="9" class="numbers">9</button>
+          </div>
+        </div>
+        <div class="row row-buttons">
+          <div class="col col-buttons">
+            <button value="0" class="numbers">0</button>
+          </div>
+          <div class="col col-buttons">
+            <button value="(" class="numbers">(</button>
+          </div>
+          <div class="col col-buttons">
+            <button value=")" class="numbers">)</button>
+          </div>
+        </div>
+        <div class="operators">
+          <div class="row row-buttons">
+            <div class="col col-buttons" id="add">
+              <button class="add">Add</button>
+            </div>
+            <div class="col col-buttons">
+              <button class="multiply">Multiply</button>
+            </div>
+          </div>
+          <div class="row row-buttons">
+            <div class="col col-buttons">
+              <button class="subtract">Subtract</button>
+            </div>
+            <div class="col col-buttons">
+              <button class="divide">Divide</button>
+            </div>
+          </div>
+          <div class="row row-buttons">
+            <div class="col col-buttons submit">
+              <button class="submit">Calculate</button>
+            </div>
+            <div class="col col-buttons clear">
+              <button>Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+      ></script>
+
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+      ></script>
+
+      <script src="index.js" charset="utf-8"></script>
+    </div>
+  </body>
+</html>

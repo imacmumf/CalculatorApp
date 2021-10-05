@@ -1,0 +1,143 @@
+/* font-family: 'Gemunu Libre', sans-serif;
+font-family: 'Italianno', cursive;
+font-family: 'Roboto', sans-serif; */
+
+/* Setting fade transition and default settings */
+body {
+    /* background-color: #cdcced; */
+    background-image: url("/Users/rneuendorff/Desktop/CalculatorApp/images/cubes-pic.jpg");
+    background-size: cover; 
+    transition: background-color 1s ease;
+    animation: fadeIn 1s;
+    text-align: center;
+
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+
+.text-box{
+    padding: 1rem;
+}
+
+textarea {
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+button {
+    border-radius: 5px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 5rem;
+    color: white;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.calcForm {
+    /* height: 10rem; */
+    text-align: center;
+    width: 30%;
+    height: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    background-image: linear-gradient(#2a246e, #4237b8);
+    border-radius: 8px;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+    
+
+}
+
+.col-buttons {
+    height: 3rem;
+    padding: 1rem;
+    margin: 0.3rem;
+    
+}
+
+button.numbers {
+    height: 2rem;
+    width: 3rem;
+}
+
+button.numbers:hover {
+    width: 3.5rem;
+    height: 2.5rem;
+}
+
+.submit:hover{
+    animation: wiggle;
+    animation-duration: 0.2s;
+}
+
+.operators button:hover{
+    animation: wiggle;
+    animation-duration: 0.2s;
+}
+
+.operators button{
+    width: 7rem;
+    
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(4deg);
+    }
+    75% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+        
+    
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 20%;
+    }
+    25% {
+        
+        opacity: 100%;
+    }
+    75% {
+      
+        opacity: 50%;
+    }
+    0% {
+
+        opacity: 100%;
+    }
+    
+}
