@@ -5,10 +5,6 @@
 
 let equation = [];
 
-// $("button").click(function(){
-//   const audio = new Audio ("beep1.wav");
-//   audio.play();
-// });
 
 $(".numbers").click(function () {
   equation.push(this.value);
@@ -61,13 +57,17 @@ $(".submit").click(function () {
   $("textarea").addClass("loadPulsate");
 
   // Remove class after set time
-  setTimeout(function(){
+  setTimeout(function () {
     $("textarea").removeClass("loadPulsate");
   }, 2000);
-  
-  
 
+  if(x == 69 || x == 58008){
+    setTimeout(function(){
+      $("textarea").text("Why are you this way");
+    },2000)
+  } else {
   setTimeout(function () {
     $("textarea").text(x);
   }, 2000);
+}
 });
