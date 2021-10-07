@@ -31,9 +31,11 @@ textarea {
 
 
 button {
-    border-radius: 5px;
+    border-radius: 30px;
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    background-color: white;
+
 }
 
 h1 {
@@ -48,7 +50,7 @@ h1 {
 .calcForm {
     /* height: 10rem; */
     text-align: center;
-    width: 30%;
+    width: 45%;
     height: 35rem;
     margin-left: auto;
     margin-right: auto;
@@ -56,25 +58,27 @@ h1 {
     background-image: linear-gradient(#2a246e, #4237b8);
     border-radius: 8px;
     box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
-    position: relative;
+    /* position: relative; */
 
 }
 
 .col-buttons {
     height: 3rem;
-    padding: 1rem;
+    padding: 0.2rem;
     margin: 0.3rem;
     
 }
 
 button.numbers {
-    height: 2rem;
-    width: 3rem;
+    height: 2.4rem;
+    width: 60%;
 }
 
 button.numbers:hover {
-    width: 3.5rem;
+    width: 80%;
     height: 2.5rem;
+    animation-name: wiggle;
+    animation-duration: 0.4s;
 }
 
 .submit:hover{
@@ -92,7 +96,11 @@ button.numbers:hover {
     
 }
 
-
+.loadPulsate{
+    animation-name: loadPulse;
+    animation-duration: 0.8s;
+    animation-iteration-count: 3;
+}
 
 
 @keyframes fadeIn {
@@ -142,9 +150,23 @@ button.numbers:hover {
     
 }
 
-@media (max-width: 375px) {
+@keyframes loadPulse {
+    from {
+        opacity: 25%;
+    }
+    to {
+        opacity: 100%;
+
+    }
+    
+}
+
+@media (max-width: 440px) {
     /* only for screens wider or equal to 630 pixels */
     .calcForm{
         width: 100%;
+        height: 90%;
     }
   }
+
+ 
