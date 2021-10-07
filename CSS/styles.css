@@ -56,7 +56,7 @@ h1 {
     background-image: linear-gradient(#2a246e, #4237b8);
     border-radius: 8px;
     box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
-    
+    position: relative;
 
 }
 
@@ -133,7 +133,7 @@ button.numbers:hover {
     }
     75% {
       
-        opacity: 50%;
+        opacity: 30%;
     }
     0% {
 
@@ -141,3 +141,10 @@ button.numbers:hover {
     }
     
 }
+
+@media (max-width: 375px) {
+    /* only for screens wider or equal to 630 pixels */
+    .calcForm{
+        width: 100%;
+    }
+  }

@@ -1,7 +1,3 @@
-// $(document).ready(function(){
-//     $("textarea").text("Answer");
-
-// });
 
 // $("document").ready(function(){
 //   $("h1").addClass();
@@ -12,9 +8,16 @@
 let equation = [];
 
 
+// $("button").click(function(){
+//   const audio = new Audio ("beep1.wav");
+//   audio.play();
+// });
+
 $(".numbers").click(function () {
   equation.push(this.value);
   $("textarea").text(equation.join(' '));
+  const audio = new Audio ("./sounds/beep2.wav");
+  audio.play();
   
 });
 
@@ -22,18 +25,25 @@ $(".numbers").click(function () {
 $(".add").click(function () {
   equation.push(" + ");
   $("textarea").text(equation.join(' '));
+  const audio = new Audio ("./sounds/beep1.wav");
+  audio.play();
   
 });
 
 $(".subtract").click(function () {
   equation.push(" - ");
   $("textarea").text(equation.join(' '));
+  const audio = new Audio ("./sounds/beep1.wav");
+  audio.play();
+  
   
 });
 
 $(".divide").click(function () {
   equation.push(" / ");
   $("textarea").text(equation.join(' '));
+  const audio = new Audio ("./sounds/beep3.wav");
+  audio.play();
   
 });
 
@@ -41,17 +51,25 @@ $(".divide").click(function () {
 $(".multiply").click(function () {
   equation.push(" * ");
   $("textarea").text(equation.join(' '));
+  const audio = new Audio ("./sounds/beep3.wav");
+  audio.play();
   
 });
 
 $(".clear").click(function () {
   equation = [];
   $("textarea").text(equation);
+  const audio = new Audio ("./sounds/laser1.wav");
+  audio.play();
 });
 
 
 $(".submit").click(function () {
+  const loading = new Audio("./sounds/loading.wav");
+  loading.play();
+
   let x = eval(equation.join(' '));
   $("textarea").text(x);
-
+  
+  
 });
