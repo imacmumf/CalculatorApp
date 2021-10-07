@@ -150,9 +150,4 @@ button.numbers:hover {
     }
   }
 
-  @media (max-width: 930px) {
-    /* only for screens wider or equal to 630 pixels */
-    .calcForm{
-        width: 70%;
-    }
-  }
+ 
