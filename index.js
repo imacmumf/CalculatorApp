@@ -4,52 +4,56 @@
 // });
 
 let equation = [];
-const beep1 = new Audio("./sounds/beep1.wav");
-const beep2 = new Audio("./sounds/beep2.wav");
-const beep3 = new Audio("./sounds/beep3.wav");
-const laser1 = new Audio("./sounds/laser1.wav");
-const loading = new Audio("./sounds/loading.wav");
 
-
+// $("button").click(function(){
+//   const audio = new Audio ("beep1.wav");
+//   audio.play();
+// });
 
 $(".numbers").click(function () {
   equation.push(this.value);
   $("textarea").text(equation.join(" "));
-  beep2.play();
+  const audio = new Audio("./sounds/beep2.wav");
+  audio.play();
 });
 
 $(".add").click(function () {
   equation.push(" + ");
   $("textarea").text(equation.join(" "));
-  beep1.play();
+  
+  audio.play();
 });
 
 $(".subtract").click(function () {
   equation.push(" - ");
   $("textarea").text(equation.join(" "));
-  beep1.play();
+  const audio = new Audio("./sounds/beep1.wav");
+  audio.play();
 });
 
 $(".divide").click(function () {
   equation.push(" / ");
   $("textarea").text(equation.join(" "));
-  beep3.play();
+  const audio = new Audio("./sounds/beep3.wav");
+  audio.play();
 });
 
 $(".multiply").click(function () {
   equation.push(" * ");
   $("textarea").text(equation.join(" "));
-  beep3.play();
+  const audio = new Audio("./sounds/beep3.wav");
+  audio.play();
 });
 
 $(".clear").click(function () {
   equation = [];
   $("textarea").text(equation);
-  laser1.play();
+  const audio = new Audio("./sounds/laser1.wav");
+  audio.play();
 });
 
 $(".submit").click(function () {
-  
+  const loading = new Audio("./sounds/loading.wav");
   loading.play();
   let x = eval(equation.join(""));
 
@@ -57,17 +61,13 @@ $(".submit").click(function () {
   $("textarea").addClass("loadPulsate");
 
   // Remove class after set time
-  setTimeout(function () {
+  setTimeout(function(){
     $("textarea").removeClass("loadPulsate");
   }, 2000);
+  
+  
 
-  if(x == 69 || x == 58008){
-    setTimeout(function(){
-      $("textarea").text("Why are you this way");
-    },2000)
-  } else {
   setTimeout(function () {
     $("textarea").text(x);
   }, 2000);
-}
 });
