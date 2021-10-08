@@ -20,7 +20,7 @@ $(".numbers").click(function () {
 $(".add").click(function () {
   equation.push(" + ");
   $("textarea").text(equation.join(" "));
-  
+  const audio = new Audio("./sounds/beep1.wav");
   audio.play();
 });
 
