@@ -4,52 +4,52 @@
 // });
 
 let equation = [];
+const beep1 = new Audio("./sounds/beep1.wav");
+const beep2 = new Audio("./sounds/beep2.wav");
+const beep3 = new Audio("./sounds/beep3.wav");
+const laser1 = new Audio("./sounds/laser1.wav");
+const loading = new Audio("./sounds/loading.wav");
+
 
 
 $(".numbers").click(function () {
   equation.push(this.value);
   $("textarea").text(equation.join(" "));
-  const audio = new Audio("./sounds/beep2.wav");
-  audio.play();
+  beep2.play();
 });
 
 $(".add").click(function () {
   equation.push(" + ");
   $("textarea").text(equation.join(" "));
-  const audio = new Audio("./sounds/beep1.wav");
-  audio.play();
+  beep1.play();
 });
 
 $(".subtract").click(function () {
   equation.push(" - ");
   $("textarea").text(equation.join(" "));
-  const audio = new Audio("./sounds/beep1.wav");
-  audio.play();
+  beep1.play();
 });
 
 $(".divide").click(function () {
   equation.push(" / ");
   $("textarea").text(equation.join(" "));
-  const audio = new Audio("./sounds/beep3.wav");
-  audio.play();
+  beep3.play();
 });
 
 $(".multiply").click(function () {
   equation.push(" * ");
   $("textarea").text(equation.join(" "));
-  const audio = new Audio("./sounds/beep3.wav");
-  audio.play();
+  beep3.play();
 });
 
 $(".clear").click(function () {
   equation = [];
   $("textarea").text(equation);
-  const audio = new Audio("./sounds/laser1.wav");
-  audio.play();
+  laser1.play();
 });
 
 $(".submit").click(function () {
-  const loading = new Audio("./sounds/loading.wav");
+  
   loading.play();
   let x = eval(equation.join(""));
 
